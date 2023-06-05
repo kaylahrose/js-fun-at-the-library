@@ -73,17 +73,21 @@ if (isFavorite) {
 // Create a new variable "books" and assign it to an Array of 5 different
 // book titles, represented by their names as Strings.
 
+var books = ["1", "2", "3", "4", "5"]
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
+books[2]
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
 
+var belowTwoHundred = ["1", "2", "3", "4", "5", "6","7","8",'9',"10","11",'12']
 
 // Write the code to access the 5th element of the array, using bracket notation.
 
+belowTwoHundred[4]
 
 //------------------------- Objects -------------------------//
 
