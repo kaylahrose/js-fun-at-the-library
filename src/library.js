@@ -30,9 +30,25 @@ function checkoutBook(library, bookTitle, shelfName) {
   }
 }
 
+function takeStock(library, shelfName) {
+  if (shelfName) {
+    return "There are a total of " + 
+    library.shelves[shelfName].length +
+    " " + shelfName + 
+    " books at the " +
+    library.name + "."
+  } else {
+    var shelfCount = Object.values(library.shelves).map(shelf => shelf.length)
+    var sum = shelfCount.reduce((partialSum, a) => partialSum + a, 0)
+    return "There are a total of " + sum +
+    " books at the " +
+    library.name + "."
+  }
+}
+
 module.exports = {
   createLibrary,
   addBook,
   checkoutBook,
-  // takeStock
+  takeStock
 };
