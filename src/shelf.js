@@ -18,9 +18,14 @@ function listTitles(shelf) {
   return titles.join(", ")
 }
 
+function searchShelf(shelf, bookTitle) {
+  var titles = shelf.map(getBookTitles)
+  return titles.includes(bookTitle)
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
