@@ -1,5 +1,6 @@
 const {
   unshelfBook,
+  shelfBook,
   searchShelf
 } = require('./shelf');
 
@@ -17,7 +18,7 @@ function createLibrary(name) {
 
 function addBook(library, book) {
   var shelf = book.genre
-  library.shelves[shelf].push(book)
+  shelfBook(book, library.shelves[shelf])
 }
 
 function checkoutBook(library, bookTitle, shelfName) {
